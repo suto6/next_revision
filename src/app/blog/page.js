@@ -10,7 +10,7 @@ export default function BlogPage() {
         {posts.map((post)=>{
             return (
                 <>
-                    <h2>{post.title}</h2>
+                    <a href={`/blog/${post.id}`}><h2>{post.title}</h2></a>
                     <p>{post.body}</p>
                 </>
             )
