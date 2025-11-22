@@ -1,8 +1,11 @@
 import React from 'react'
-export default function Page1() {
+export default async function Page1({params}) {
+
+  //data fetch
+const {id} = await params
   return (
     <div>
-      <h2>Blog 1</h2>
+      <h2>Blog {id}</h2>
     </div>
   )
 }

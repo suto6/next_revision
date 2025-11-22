@@ -1,3 +1,4 @@
+import Link from 'next/link';
 export default function BlogPage() {
     const posts = [
       { id: "1", title: "Post One", body: "This is the body of post one." },
@@ -5,14 +6,25 @@ export default function BlogPage() {
       { id: "3", title: "Post Three", body: "This is the body of post three." }
     ]
   return <div>
+          <nav className="flex justify-between items-center px-4 py-2">
+        <Link href="/">Logo</Link>
+        <div className="flex justify-between px-4 gap-6 colors-blue">
+        <Link href="/">Home</Link>
+        <Link href="/blog">blog</Link>
+
+        </div>
+
+      </nav>
     <h1>Blog Page</h1>
     <div>
         {posts.map((post)=>{
             return (
-                <>
-                    <a href={`/blog/${post.id}`}><h2>{post.title}</h2></a>
+                <div key={post.id}>
+                    <Link href={`/blog/${post.id}`}>
+                    <h2>{post.title}</h2>
+                    </Link>
                     <p>{post.body}</p>
-                </>
+                </div>
             )
         })}
     </div>
