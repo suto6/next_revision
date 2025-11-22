@@ -23,15 +23,15 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-              <nav className="flex justify-between items-center px-4 py-2">
-        <Link href="/">Logo</Link>
-        <div className="flex justify-between px-4 gap-6 colors-blue">
-        <Link href="/">Home</Link>
-        <Link href="/blog">blog</Link>
+        <nav className="flex justify-between items-center px-4 py-2">
+          <Link href="/">Logo</Link>
+          <div className="flex justify-between px-4 gap-6 colors-blue">
+            <Link href="/">Home</Link>
+            <Link href="/blog">blog</Link>
 
-        </div>
+          </div>
 
-      </nav>
+        </nav>
         {children}
       </body>
     </html>
