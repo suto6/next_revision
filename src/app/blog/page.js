@@ -6,15 +6,6 @@ export default function BlogPage() {
       { id: "3", title: "Post Three", body: "This is the body of post three." }
     ]
   return <div>
-          <nav className="flex justify-between items-center px-4 py-2">
-        <Link href="/">Logo</Link>
-        <div className="flex justify-between px-4 gap-6 colors-blue">
-        <Link href="/">Home</Link>
-        <Link href="/blog">blog</Link>
-
-        </div>
-
-      </nav>
     <h1>Blog Page</h1>
     <div>
         {posts.map((post)=>{
